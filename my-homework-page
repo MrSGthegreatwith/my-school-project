@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mrsg's Homework Sharing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #0066cc;
+            color: white;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .upload-form {
+            background-color: #ffcc00;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        input[type="file"], input[type="submit"] {
+            margin-top: 10px;
+        }
+        .homework-list {
+            list-style: none;
+            padding: 0;
+        }
+        .homework-item {
+            background-color: #e6f7ff;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-left: 5px solid #ff3300;
+        }
+        .homework-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        footer {
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #009933;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Mrsg's Homework Sharing Page</h1>
+        <p>Share and view homework submissions with your friends!</p>
+    </header>
+
+    <div class="container">
+
+        <section class="upload-form">
+            <h2>Upload Your Homework</h2>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input type="file" name="homework" required><br>
+                <input type="text" name="username" placeholder="Your Name" required><br>
+                <input type="submit" value="Upload">
+            </form>
+        </section>
+
+        <section>
+            <h2>Recent Homework Submissions</h2>
+            <ul class="homework-list">
+                <li class="homework-item">
+                    <img src="user1.jpg" alt="User 1">
+                    <strong>User 1</strong> uploaded on September 10, 2024 <br>
+                    <a href="#">Download Homework</a>
+                </li>
+                <li class="homework-item">
+                    <img src="user2.jpg" alt="User 2">
+                    <strong>User 2</strong> uploaded on September 9, 2024 <br>
+                    <a href="#">Download Homework</a>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Created by the Homework Sharing Team</p>
+    </footer>
+
+</body>
+</html>
